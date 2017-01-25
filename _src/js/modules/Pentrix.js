@@ -38,7 +38,7 @@ export default class pentrix extends EventEmitter {
     this.ctx = this.cnvs.getContext('2d');
     this.cnvsNext = opts.canvasNext || document.createElement('canvas');
     this.ctxNext = this.cnvsNext.getContext('2d');
-    this.rootElm.appendChild(this.cnvsNext);
+    // this.rootElm.appendChild(this.cnvsNext);
     this.rootElm.appendChild(this.cnvs);
 
     this.initCanvasSize();

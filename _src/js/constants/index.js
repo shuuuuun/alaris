@@ -1,10 +1,10 @@
-import SHAPE_LIST from './SHAPE_LIST_5';
+import SHAPE_LIST from './SHAPE_LIST_4';
 
-export const COLS = 15;
-export const ROWS = 15;
+export const COLS = 10;
+export const ROWS = 18;
 
-export const BLOCK_SIZE = 25;
-export const NUMBER_OF_BLOCK = 5;
+export const BLOCK_SIZE = 35;
+export const NUMBER_OF_BLOCK = 4;
 
 export const HIDDEN_ROWS = NUMBER_OF_BLOCK;
 export const LOGICAL_ROWS = ROWS + HIDDEN_ROWS;
