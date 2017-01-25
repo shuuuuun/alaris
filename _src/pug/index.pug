@@ -1,0 +1,16 @@
+extends layout/_default
+
+prepend ConfigBlock
+  - page_name = ''
+
+block ContentBlock
+  div.container
+    h1.title= title
+    div#game-root
+    div.info-display
+      p.clear-line-display
+        | Clear Lines: 
+        span#clearLine 0
+      p.score-display
+        | Score: 
+        span#score 0
