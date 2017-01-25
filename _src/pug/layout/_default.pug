@@ -9,6 +9,19 @@ html(lang="ja")
     block StylesheetBlock
       link(rel="stylesheet" href="./css/app.css")
     
+    script.
+      (function() {
+        var breakpoint = 375;
+        var viewport = document.querySelector('meta[name=viewport]') || {};
+        var winW = window.outerWidth || window.innerWidth; // リロードするとinnerWidthの値がおかしい時がある（キャッシュで前回書き換えたviewportの幅が出ている？）
+        // console.log(window.innerWidth, window.outerWidth, winW <= breakpoint);
+        if (winW <= breakpoint) {
+          viewport.content = 'width=375,user-scalable=no';
+          // viewport.content = 'width=375,user-scalable=no,initial-scale=1.0'; // initial-scale=1.0があるとなんか上手くいかない
+          // viewport.setAttribute('content', 'width=375,user-scalable=no'); // setAttributeでも可
+        }
+      })();
+
     include ../partials/_ga
     
   body
