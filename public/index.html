@@ -7,16 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <link rel="canonical" href="https://shuuuuun.github.io/Pentrix/">
     <link rel="stylesheet" href="./css/app.css">
+    <script>
+      (function() {
+        var breakpoint = 375;
+        var viewport = document.querySelector('meta[name=viewport]') || {};
+        var winW = window.outerWidth || window.innerWidth; // リロードするとinnerWidthの値がおかしい時がある（キャッシュで前回書き換えたviewportの幅が出ている？）
+        // console.log(window.innerWidth, window.outerWidth, winW <= breakpoint);
+        if (winW <= breakpoint) {
+          viewport.content = 'width=375,user-scalable=no';
+          // viewport.content = 'width=375,user-scalable=no,initial-scale=1.0'; // initial-scale=1.0があるとなんか上手くいかない
+          // viewport.setAttribute('content', 'width=375,user-scalable=no'); // setAttributeでも可
+        }
+      })();
+      
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
-        <h1 class="title">Pentrix</h1>
+        <p>アラーム時刻: 
+          <input class="js-input-time" type="time">
+          <button class="js-button-set-alarm" type="button">設定</button>
+        </p>
         <div id="game-root"></div>
-        <div class="info-display">
-          <p class="clear-line-display">Clear Lines: <span id="clearLine">0</span></p>
-          <p class="score-display">Score: <span id="score">0</span></p>
-        </div>
       </div>
     </div>
     <script src="./js/script.js"></script>
