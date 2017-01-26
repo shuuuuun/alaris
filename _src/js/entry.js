@@ -62,7 +62,7 @@ function setAlarm(timeDate) {
 
     const hoge = () => {
       console.log(pentrix.sumOfClearLines)
-      if (pentrix.sumOfClearLines > 0) {
+      if (pentrix.sumOfClearLines >= 4) {
         source.stop();
         // pentrix.off(evt);
         // pentrix.off('tick', hoge);
