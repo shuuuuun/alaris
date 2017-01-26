@@ -20,6 +20,7 @@
     "babel-preset-es2015": "latest",
     "babelify": "latest",
     "browserify": "latest",
+    "eventemitter2": "^3.0.0",
     "gulp": "latest",
     "gulp-eslint": "latest",
     "gulp-if": "latest",
