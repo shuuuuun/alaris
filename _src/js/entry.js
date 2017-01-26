@@ -7,7 +7,7 @@ var context = new AudioContext();
 var audioBuffer = null;
 getAudioBuffer('/sound/su715.mp3', function(buffer) {
   audioBuffer = buffer;
-  playSound(audioBuffer);
+  // playSound(audioBuffer);
 });
 
 const container = document.querySelector('.container');
