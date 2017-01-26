@@ -1,7 +1,7 @@
 import SHAPE_LIST from './SHAPE_LIST_4';
 
 export const COLS = 10;
-export const ROWS = 18;
+export const ROWS = 16;
 
 export const BLOCK_SIZE = 35;
 export const NUMBER_OF_BLOCK = 4;

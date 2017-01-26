@@ -1,5 +1,5 @@
 import $ from 'jquery-deferred';
-import EventEmitter from 'events';
+import EventEmitter from 'eventemitter2';
 import Util from './Util';
 import TouchController from './TouchController';
 import {
