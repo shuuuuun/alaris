@@ -27,13 +27,14 @@ inputTime.value = `${hour}:${minute}:${second}`;
 
 buttonSetAlarm.addEventListener('click', () => {
   const value = inputTime.value
-  const hour = value.split(':')[0]
-  const minute = value.split(':')[1]
-  const second = value.split(':')[2]
+  const hour = value.split(':')[0] || 0
+  const minute = value.split(':')[1] || 0
+  const second = value.split(':')[2] || 0
   const timeDate = new Date();
   timeDate.setHours(hour);
   timeDate.setMinutes(minute);
   timeDate.setSeconds(second);
+  console.log(timeDate, hour, minute, second)
   const success = setAlarm(timeDate);
 
   if (success) {
