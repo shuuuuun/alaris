@@ -34,7 +34,12 @@ buttonSetAlarm.addEventListener('click', () => {
   timeDate.setHours(hour);
   timeDate.setMinutes(minute);
   timeDate.setSeconds(second);
-  setAlarm(timeDate);
+  const success = setAlarm(timeDate);
+
+  if (success) {
+    buttonSetAlarm.setAttribute('disabled', 'disabled')
+    inputTime.setAttribute('disabled', 'disabled')
+  }
 })
 
 
@@ -56,7 +61,7 @@ pentrix.newGame();
 function setAlarm(timeDate) {
   const now = new Date();
   const diff = timeDate - new Date();
-  if (diff < 0) return;
+  if (!diff || diff < 0) return false;
   console.log(timeDate, `${diff} milliseconds after.`)
   setTimeout(() => {
     console.log("it's time!!!");
@@ -73,6 +78,7 @@ function setAlarm(timeDate) {
     }
     pentrix.on('tick', hoge);
   }, diff)
+  return true;
 }
 
 function getAudioBuffer(url, fn) {  
