@@ -22,16 +22,18 @@ const pentrix = new Pentrix({
 const now = new Date();
 const hour = ('0' + now.getHours()).slice(-2);
 const minute = ('0' + now.getMinutes()).slice(-2);
-inputTime.value = `${hour}:${minute}`;
+const second = ('0' + now.getSeconds()).slice(-2);
+inputTime.value = `${hour}:${minute}:${second}`;
 
 buttonSetAlarm.addEventListener('click', () => {
   const value = inputTime.value
   const hour = value.split(':')[0]
   const minute = value.split(':')[1]
+  const second = value.split(':')[2]
   const timeDate = new Date();
   timeDate.setHours(hour);
   timeDate.setMinutes(minute);
-  timeDate.setSeconds(0);
+  timeDate.setSeconds(second);
   setAlarm(timeDate);
 })
 
@@ -158,4 +160,3 @@ function playSoundHz(hz, duration) {
         }, duration);
     });
 }
-
