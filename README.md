@@ -1,5 +1,5 @@
 # Alaris
 
-alarm + tetris mock.
+alarm + tetris mockup.
 
-https://shuuuuun.github.io/alaris/
+DEMO: https://shuuuuun.github.io/alaris/
