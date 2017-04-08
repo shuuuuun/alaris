@@ -1,9 +1,9 @@
 import SHAPE_LIST from './SHAPE_LIST_4';
 
-export const COLS = 10;
-export const ROWS = 10;
+export const COLS = 12;
+export const ROWS = 12;
 
-export const BLOCK_SIZE = 35;
+export const BLOCK_SIZE = 30;
 export const NUMBER_OF_BLOCK = 4;
 
 export const HIDDEN_ROWS = NUMBER_OF_BLOCK;

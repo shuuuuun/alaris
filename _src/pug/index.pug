@@ -6,8 +6,8 @@ prepend ConfigBlock
 block ContentBlock
   div.container
     h1.title= title
+    div#game-root
     p
       | アラーム時刻: 
       input.js-input-time(type="time" step="30" autofocus)
       button.js-button-set-alarm(type="button") 設定
-    div#game-root
