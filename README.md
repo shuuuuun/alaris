@@ -1,4 +1,4 @@
-# Alaris
+# ALARIS
 
 alarm + tetris mockup.
 
