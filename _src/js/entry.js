@@ -5,7 +5,7 @@ import Pentrix from './modules/Pentrix';
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 var context = new AudioContext();
 var audioBuffer = null;
-getAudioBuffer('/sound/su715.mp3', function(buffer) {
+getAudioBuffer('./sound/su715.mp3', function(buffer) {
   audioBuffer = buffer;
   // playSound(audioBuffer);
 });
